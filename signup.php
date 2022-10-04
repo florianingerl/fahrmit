@@ -30,9 +30,13 @@ session_start();
         } catch (Exception $exception) {
             $errorMessage = $exception->getMessage();
         }
+
+        include_once("uploaduserimage.php");
     }
 
     ?>
+
+    
 
     <?php
     include_once("header.php");
