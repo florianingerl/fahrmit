@@ -1,5 +1,6 @@
 <?php
-include_once("setimageofloggeduser.php");
+include_once("mysql.php");
+include_once("imageutils.php");
 ?>
 
 <style>
@@ -35,8 +36,8 @@ include_once("setimageofloggeduser.php");
         background-color: green;
         color: white;
         border: 2px solid brown;
-        text-align:center;
-        height:30px;
+        text-align: center;
+        height: 30px;
         border-radius: 5px;
     }
 
@@ -51,19 +52,21 @@ include_once("setimageofloggeduser.php");
     <span id="logo">Fahr mit</span>
     <a href="">Fahrt suchen</a>
     <a href="">Fahrt anbieten</a>
-    <a href="login.php" class="signin">Sign in</a>
-    <a href="signup.php" class="signup">Sign up</a>
-    <?php if(isset($_SESSION['loggedUser'])) { ?>
+    <?php if (!isset($_SESSION['loggedUser'])) { ?>
+        <a href="login.php" class="signin">Sign in</a>
+        <a href="signup.php" class="signup">Sign up</a>
+    <?php } else { ?>
         <a href="logout.php" class="logout">Logout</a>
-    <?php } ?>
-    <div id="logPanel">
-        <img src="<?php echo $image ?>" height="50px"></img>
-        <div>
-            Logged in as <?php if (isset($_SESSION['loggedUser'])) {
-                                echo $_SESSION['loggedUser']['username'];
-                            } ?></br>
-            <a href="">Meine Fahrten</a>
+
+        <div id="logPanel">
+            <img src="<?php echo getImageFromUsername($_SESSION['loggedUser']['username']); ?>" height="50px"></img>
+            <div>
+                Logged in as <?php echo $_SESSION['loggedUser']['username'];
+                                ?></br>
+                <a href="">Meine Fahrten</a>
+            </div>
         </div>
-    </div>
+
+    <?php } ?>
 
 </div>
