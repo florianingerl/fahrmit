@@ -51,7 +51,7 @@ include_once("imageutils.php");
     <a href="home.php"><img src="assets/img/logo.png" alt="" height="50px"></img></a>
     <span id="logo">Fahr mit</span>
     <a href="">Fahrt suchen</a>
-    <a href="">Fahrt anbieten</a>
+    <a href="offerfahrt.php">Fahrt anbieten</a>
     <?php if (!isset($_SESSION['loggedUser'])) { ?>
         <a href="login.php" class="signin">Sign in</a>
         <a href="signup.php" class="signup">Sign up</a>
