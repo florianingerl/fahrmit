@@ -31,4 +31,14 @@ function getImageFromId($conn, $id){
     return getImageFromUsername($result[0]['username']);
 }
 
+function getUserFromId($conn, $id){
+    $sql = "select * from users where id = $id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
+    return $result[0];
+}
+
 ?>
