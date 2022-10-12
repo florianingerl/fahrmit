@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Erstellungszeit: 05. Okt 2022 um 18:14
+-- Erstellungszeit: 12. Okt 2022 um 14:24
 -- Server-Version: 5.7.36
 -- PHP-Version: 7.4.26
 
@@ -81,10 +81,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (1, 'florianingerl', 'imelflorianingerl@gmail.com', 'ABC'),
 (2, 'fadekemischriefer', 'fadekemi.schriefer@yahoo.com', 'XYZ'),
 (3, 'Hermann', 'Ingerl-H@online.de', 'Herbstein'),
-(4, 'sonja', 'ksdfljs', 'sdfkdfj'),
-(5, 'imelflorianin@m', 'dsfsdf', 'ABC'),
 (6, 'emmi', 'Emmi@gmail.com', 'ABC'),
-(7, 'emmiiii', 'Emmiiiii@gmail.com', 'ABC'),
 (8, 'angela', 'angela@gmail.com', 'ABCD'),
 (9, 'christophdaum', 'christophdaum@gmail.com', 'Amen');
 COMMIT;
