@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<h1>Offer a Mifahrgelegenheit</h1>
+<h1>Offer a lift</h1>
 <form action="offerfahrt.php" method="POST">
     <p>From:</p>
     <input type="text" placeholder="From" id="from" name="from"></input>
